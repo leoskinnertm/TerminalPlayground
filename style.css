@@ -1,0 +1,102 @@
+body {
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+#terminal {
+  width: 600px;
+  height: 400px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+#titleBar {
+  height: 20px;
+  background-color: #0078d7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+  -webkit-app-region: drag;
+  cursor: move;
+}
+
+#title {
+  color: white;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+#windowControls {
+  display: flex;
+}
+
+#windowControls button {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+  border-radius: 50%;
+  border: none;
+}
+
+#minimizeButton {
+  background-color: #eeb211;
+}
+
+#maximizeButton {
+  background-color: #00a300;
+}
+
+#closeButton {
+  background-color: #ff3b30;
+}
+
+#output {
+  flex-grow: 1;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: lime black;
+  padding: 10px;
+}
+
+#output::-webkit-scrollbar {
+  width: 8px;
+}
+
+#output::-webkit-scrollbar-track {
+  background: black;
+}
+
+#output::-webkit-scrollbar-thumb {
+  background-color: lime;
+  border-radius: 4px;
+}
+
+#input {
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+#prompt {
+  color: lime;
+  margin-right: 5px;
+}
+
+#commandInput {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: lime;
+  outline: none;
+}
